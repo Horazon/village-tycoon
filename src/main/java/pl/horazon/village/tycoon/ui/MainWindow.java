@@ -6,7 +6,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionListener;
 
-import static pl.horazon.village.tycoon.i18n.I18nSupport.getTxtForKey;
+import static pl.horazon.village.tycoon.config.i18n.I18nSupport.getTxtForKey;
 
 public class MainWindow extends JFrame {
 
