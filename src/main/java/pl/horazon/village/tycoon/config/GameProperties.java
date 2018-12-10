@@ -1,4 +1,4 @@
-package pl.horazon.village.tycoon.game.config;
+package pl.horazon.village.tycoon.config;
 
 import org.apache.commons.configuration2.Configuration;
 import org.apache.commons.configuration2.builder.fluent.Configurations;
