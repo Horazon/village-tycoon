@@ -10,6 +10,7 @@ public final class GameProperties {
 
     private static Configurations configs;
     private static Configuration imageConfig;
+    private static Configuration gameConfig;
 
     private GameProperties() {
         // nothing to do here, SonarLint req
@@ -19,6 +20,7 @@ public final class GameProperties {
         try {
             configs = new Configurations();
             imageConfig = configs.properties(new File("img.properties"));
+            gameConfig = configs.properties(new File("game.properties"));
         } catch (ConfigurationException e) {
             e.printStackTrace();
         }
@@ -26,5 +28,9 @@ public final class GameProperties {
 
     public static Configuration getImageConfig() {
         return imageConfig;
+    }
+
+    public static Configuration getGameConfig() {
+        return gameConfig;
     }
 }

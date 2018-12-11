@@ -1,5 +1,6 @@
 package pl.horazon.village.tycoon.ui;
 
+import pl.horazon.village.tycoon.game.Board;
 import pl.horazon.village.tycoon.ui.img.Images;
 
 import javax.imageio.ImageIO;
@@ -22,15 +23,12 @@ class DrawPanel extends JPanel {
 
         Graphics2D g2d = (Graphics2D) g;
 
-        int width = 10;
-        int height = 10;
-
-        int[][] borad = new int[width][height];
+        int[][] borad = Board.getInstance().getBorad();
 
         g2d.setColor(new Color(125, 167, 116));
 
-        for (int row = 0; row < width; row++)
-            for (int col = 0; col < height; col++) {
+        for (int row = 0; row < borad.length; row++)
+            for (int col = 0; col < borad[row].length; col++) {
                 g2d.drawRect(50 * col, 50 * row, 50, 50);
                 //g2d.drawImage(img,32 * col, 32 * row , null);
             }
