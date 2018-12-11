@@ -59,6 +59,7 @@ public class MainWindow extends JFrame {
         setJMenuBar(menubar);
 
         this.add(new DrawPanel());
+        add(new ButtonPanel(), BorderLayout.EAST);
 
         statusbar = new JLabel("Ready");
         statusbar.setBorder(BorderFactory.createEtchedBorder());
